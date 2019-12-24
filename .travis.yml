@@ -1,0 +1,11 @@
+sudo: required
+services:
+  - docker
+
+
+before_install:
+  - docker build -t sachin_murari/flask_mongo -f /modules/Dockerfile .
+
+script:
+  - docker run sachin_murari/flask_mongo
+
